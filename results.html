@@ -1,0 +1,32 @@
+<html>
+
+<body>
+
+<p id="NumberClickOutput"></p>
+
+<button onclick="GetResults()">Start</button> 
+
+</body>
+
+
+<script>
+
+function GetResults(){
+
+	var submitNumber = localStorage.getItem("submitNumber");
+
+	var prompt=prompt("Which one (Always put a 0 befor the number)");
+
+	if (prompt=timeClick){
+
+		alert(submitNumber);
+
+	}
+}
+
+var timeClick = localStorage.getItem("timeClick");
+
+document.getElementById("NumberClickOutput").innerHTML = timeClick;
+</script>
+
+</html>
