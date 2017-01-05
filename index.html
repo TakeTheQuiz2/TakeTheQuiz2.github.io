@@ -1,0 +1,462 @@
+<html>
+
+<style>
+
+li a:hover {
+
+    background-color: #21b82b;
+
+}
+
+  a{
+
+    margin: 20px 20px;
+
+    font-size: 20px;
+
+  }
+
+
+a:link, a:visited {
+    background-color: black;
+
+    font-size: 30px;
+
+    color: white;
+
+    padding: 20px 22px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+}
+
+a:hover, a:active {
+
+    background-color: blue;
+}
+
+h6{
+
+color: red;
+
+font-size: 30px;
+
+}
+
+h1{
+
+  color: white;
+
+  font-size: 50px;
+
+  text-align: center;
+
+  }
+
+  p{
+
+   color: white;
+
+    font-size: 30px;
+
+  }
+
+  body{
+
+   background-color: black; 
+
+  }
+
+  </style>
+
+  <body>
+
+    <h1>Take The Quiz</h1>
+
+    <img src=Take-The-Quiz-300x199.jpg>
+
+    <h6>Only push on a button in each section!</h6>
+
+    <p>_________________________________________________________________________________________________________</p>
+
+    <p>Do You Like Shoping?</p>
+
+    <img src=cartoon-guy-grocery-shopping-by-ron-leishman-10353.jpg>
+
+    <h5 id="clicked1">Clicked</h5>
+
+   <button onclick="Q1P1()">YES</button>
+
+    <button onclick="Q1P2()">NO</button>
+
+    <p>____________________________________________________________________________________________________________</p>
+
+    <p>Do you like action movies or drama movies?</p>
+
+    <h5 id="clicked2">Clicked</h5>
+
+    <button onclick="Q2P1()">action</button>
+
+    <button onclick="Q2P2()">drama</button>
+
+    <p>___________________________________________________________________________________________________________</p>
+
+    <p>What is the color of your eyes?</p>
+
+    <img src=images5UE20EEF.jpg>
+
+    <h5 id ="eye">Clicked</h5>
+
+    <button onclick="eye()">blue</button>
+
+    <button onclick="eye()">brown</button>
+
+    <p>_________________________________________________________________________________________________________</p>
+
+    <p>Do you think farts are funny?</p>
+
+    <h5 id ="clicked3">Clicked</h5>
+
+    <button onclick="Q3P1()">Yes</button>
+
+    <button onclick="Q3P2()">No</button>
+    
+    <p>_________________________________________________________________________________________________________</p>
+
+    
+    <p>If you made a movie would the protagonist live or die?</p>
+
+    <img src=imagesPARVAMW4.jpg>
+
+    <h5 id ="clicked4">Clicked</h5>
+
+    <button onclick="Q4P1()">Live</button>   
+
+    <button onclick="Q4P2()">Die</button>
+
+    <p>________________________________________________________________________________________________________</p>
+
+    <p>Do you use conditioner?</p>
+
+    <h5 id ="clicked5">Clicked</h5>
+
+    <button onclick="Q5P1()">Yes</button>       
+
+    <button onclick="Q5P2()">No</button>
+
+    <p>_________________________________________________________________________________________________________</p>
+
+    <button onClick="A()">Click Here To See Results!</button>
+
+    <p>Please sumbit you results. Just click (Submit) then put in your gender</p>
+
+    
+    <button onClick="submit()">Submit</button>
+
+  </body>
+
+//BA stands for Boy Answer
+//GA stands for Girl Answer
+
+  <script>
+
+      var GOB = 0;
+
+localStorage.setItem("GOB", GOB);
+
+  function Q1P1(){
+
+    var GOB = localStorage.getItem("GOB");
+
+    var number = 100;
+
+    var GOB1 = GOB + number;
+
+    localStorage.setItem("GOB1", GOB1);
+
+     var x = document.getElementById("clicked1");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red"; 
+
+   var Q1 = GA;
+
+   localStorage.setItem("Q1", Q1);
+
+  }
+
+    function Q1P2(){
+
+      var GOB = localStorage.getItem("GOB");
+
+      var number = 1;
+
+      var GOB1 = GOB + number;
+
+      localStorage.setItem("GOB1", GOB1); 
+
+      var x = document.getElementById("clicked1");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    var Q1 = BA;
+
+    localStorage.setItem("Q1", Q1);
+
+    }
+
+    function eye(){
+
+      var x = document.getElementById("eye");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    }
+
+    
+
+    function Q2P1(){
+
+      var GOB1 = localStorage.getItem("GOB1");
+
+      var number = 1;
+
+      var GOB2 = GOB1 + number;
+
+      localStorage.setItem("GOB2", GOB2);
+
+      var x = document.getElementById("clicked2");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    var Q2 = BA;
+
+    localStorage.setItem("Q2", Q2);
+
+    }
+
+    function Q2P2(){
+
+      var GOB1 = localStorage.getItem("GOB1");
+
+      var number = 100;
+
+      var GOB2 = GOB1 + number;
+
+      localStorage.setItem("GOB2", GOB2);
+
+      var x = document.getElementById("clicked2");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    var Q2 = GA;
+
+    localStorage.setItem("Q2", Q2);
+
+    }
+
+    
+
+    function Q3P1(){
+
+     var GOB2 = localStorage.getItem("GOB2");
+
+     var number = 1;
+
+      var GOB3 = GOB2 + number;
+
+     localStorage.setItem("GOB3", GOB3);
+
+      var x = document.getElementById("clicked3");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    var Q3 = BA;
+
+    localStorage.setItem("Q3", Q3);
+
+    }
+
+    
+
+    function Q3P2(){
+
+     var GOB2 = localStorage.getItem("GOB2");
+
+      var number = 100;
+
+      var GOB3 = GOB2 + number;
+
+      localStorage.setItem("GOB3", GOB3);
+
+      var x = document.getElementById("clicked3");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    var Q3 = GA;
+
+    localStorage.setItem("Q3", Q3);
+
+    }
+
+    
+
+    function Q4P1(){
+
+     var GOB3 = localStorage.getItem("GOB3");
+
+     var number = 100;
+
+     var GOB4 = GOB3 + number;
+
+     localStorage.setItem("GOB4", GOB4);
+
+      var x = document.getElementById("clicked4");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    var Q4 = GA;
+
+    localStorage.setItem("Q4", Q4);
+
+    }
+
+    function Q4P2(){
+
+     var GOB3 = localStorage.getItem("GOB3");
+
+     var number = 1;
+
+     var GOB4 = GOB3 + number;
+
+      localStorage.setItem("GOB4", GOB4);
+
+      var x = document.getElementById("clicked4");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    var Q4 = BA;
+
+    localStorage.setItem("Q4", Q4);
+
+    }
+    
+
+    function Q5P1(){
+
+      var GOB4 = localStorage.getItem("GOB4");
+
+      var number = 100;
+
+      var GOB5 = GOB4 + number;
+
+      localStorage.setItem("GOB5", GOB5);
+
+      var x = document.getElementById("clicked5");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    var Q5 = GA;
+
+    localStorage.setItem("Q5", Q5);
+
+    }
+
+    function Q5P2(){
+
+     var GOB4 = localStorage.getItem("GOB4");
+
+      var number = 1;
+
+      var GOB5 = GOB4 + number;
+
+      localStorage.setItem("GOB5", GOB5);
+
+      var x = document.getElementById("clicked5");   
+
+    x.style.fontSize = "30px";    
+
+    x.style.color = "red";
+
+    var Q5 = BA;
+
+    localStorage.setItem("Q5", Q5);
+
+    }
+
+    function A(){
+
+     var GOB5 = localStorage.getItem("GOB5");
+
+      if(GOB5<5050505050){
+
+       alert('You are a boy.'); 
+
+       var Answer = boy;
+
+       localStorage.setItem("Answer", Answer);
+
+      }
+
+      if(GOB5>5050505051){
+
+        alert('You are a girl.');
+
+        var Answer = girl;
+
+        localStorage.setItem("Answer", Answer);
+
+      }
+
+    }
+
+    function submit(){
+
+     var gender=prompt("What is your gender?");
+
+     var submitNumber;
+
+     var number = 1;
+
+     var zero = 0;
+
+     submitNumber = zero + number;
+
+     var submitNumber = zero + gender + Answer + Q5 + Q4 + Q3 + Q2 + Q1;
+
+     LocalStorage.setItem("submitNumber", submitNumber);
+
+     var timeClick;
+
+     timeClick = zero + number;
+
+     LocalStorage.setItem("timeClick", timeClick);
+
+    }
+
+  </script>
+
+</html>
